@@ -34,7 +34,17 @@ Do the following to make the plot.
 ## library(IPSUR)
 library(HH)
 plot(prop.test(1755, 1755 + 2771, p = 0.4, alternative = "less", conf.level = 0.99, correct = FALSE), 'Hypoth')
- 
+
+Answer for problem 2 Automatic car(2.	How do you test the proportions and compare against hypothetical props?    Test Hypothesis: proportion of automatic cars is 40%.)
+ Answer:-
+ prop.test(table(mtcars$am)[2],nrow(mtcars),p=0.4,alternative ="less",conf.level =0.99,correct =FALSE)
+
+And to resolve the issue with second question you need to follow the below command.
+
+H0 : p=0.4
+Ha : p!=0.4
+prop.test(table(mtcars$am)[2],nrow(mtcars),p=0.4,alternative ="less",conf.level =0.99,correct =FALSE)
+
 
 x <- rnorm(37, mean = 2, sd = 3)
 library(TeachingDemos)
